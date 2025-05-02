@@ -78,6 +78,7 @@ h1{
     /* margin-left:10px ; */
     background-color: #0B111E;
 }
+
 h3{
     /* margin-top: 6px; */
     font-size: 2vw;
@@ -275,6 +276,44 @@ h3{
     align-items: center;
     transition: all 0.2s ease;
     overflow: hidden;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+span{
+    animation-name: appear;
+    /* animation-duration: 0.3s; */
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear1 {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+img{
+    animation-name: appear;
+    /* animation-duration: 0.3s; */
+    animation-timing-function: linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 /* ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
@@ -483,6 +522,7 @@ textarea::placeholder{
     display: none;
     color: lightgreen;
   }
+
 
 footer{
     height: 10vh;
